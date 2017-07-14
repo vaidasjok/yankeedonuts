@@ -1,0 +1,20 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <% if @user.errors.count == 1 %>
+        <% galune = 'a' %>
+        <% elsif @user.errors.count == 10 %>
+          <% galune = 'ų'%> 
+        <% else %>
+          <% galune = 'os' %>
+      <% end %>
+      Formoje yra <%= @user.errors.count %> klaid<%= galune %>.
+    </div>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      
+    <% end %>
+    </ul>
+  </div>
+<% end %>

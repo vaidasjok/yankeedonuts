@@ -1,0 +1,8 @@
+<% provide(:title, 'Produkto kategorijos koregavimas') %>
+<% provide(:page_title, 'Produkto kategorijos koregavimas') %>
+<% provide(:button_text, 'Patvirtinti') %>
+
+<%= render 'form', product_category: @product_category %>
+
+<%= link_to 'Rodyti', @product_category, class: "btn btn-default" %> |
+<%= link_to 'Atgal', product_categories_path, class: "btn btn-default" %>

@@ -1,0 +1,9 @@
+<% provide(:title, "puslapio ''#{@page.title}'' koregavimas") %>
+<% provide(:page_title, "puslapio ''#{@page.title}'' koregavimas") %>
+<% provide(:button_text, "Patvirtinti") %>
+
+
+<%= render 'form', page: @page %>
+
+<%= link_to 'Peržiūrėti', puslapis_path(@page), class: 'btn btn-default' %> |
+<%= link_to 'Atgal', pages_path, class: 'btn btn-default' %>

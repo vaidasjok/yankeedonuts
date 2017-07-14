@@ -1,0 +1,8 @@
+<% provide(:title, 'Naujas produktas') %>
+<% provide(:page_title, 'Naujas produktas') %>
+<% provide(:button_text, 'Patvirtinti') %>
+
+
+<%= render 'form', product: @product %>
+
+<%= link_to 'Back', products_path %>

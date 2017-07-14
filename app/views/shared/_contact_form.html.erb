@@ -1,0 +1,15 @@
+<%= form_tag("/send-mail", method: "post") do %>
+
+  <%= label_tag(:email, "El. pašto adresas") %>
+  <%= text_field_tag(:email) %>
+
+  <%= label_tag(:phone, "Telefono numeris") %>
+  <%= text_field_tag(:phone) %>
+
+  <%= label_tag(:subject, "Tema") %>
+  <%= text_field_tag(:subject) %>
+
+  <%= label_tag(:message, "Žinutė") %>
+  <%= text_area_tag(:message) %>
+  <%= submit_tag "Siūsti", class: 'btn btn-default btn-info' %>
+<% end %>

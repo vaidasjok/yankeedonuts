@@ -1,0 +1,13 @@
+<% provide(:title, 'Kurti produkto kategoriją') %>
+<% provide(:page_title, 'Kurti produkto kategoriją') %>
+<% provide(:button_text, 'Patvirtinti') %>
+
+<p id="notice"><%= notice %></p>
+
+<div id="breadcrumb">
+  <p><a href="/users/<%= current_user.id %>">Adminitravimo pultas</a>/katalogo kategorijų valdymas</p>
+</div>
+
+<%= render 'form', product_category: @product_category %>
+
+<%= link_to 'Back', product_categories_path, class: "btn btn-default" %>

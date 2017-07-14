@@ -1,0 +1,72 @@
+[
+  {
+    "pavadinimas": "UAB \"Servisas 1\"",
+    "trumpasPavadinimas": "Servisas_1",
+    "adresas": "Savanorių pr. 110, Vilnius",
+    "latLng": {
+      "lat": 54.6658692,
+      "lng": 25.23702639999999
+    },
+    "miestas": "Vilnius",
+    "telefonas": "+370 623 01702",
+    "image": "ps_paveiksliukas.png",
+    "ivertinimas": 5,
+    "kategorijos": [
+      "vaziuokles remontas",
+      "stiklu remontas",
+      "variklio remontas"
+    ]
+  },
+  {
+    "pavadinimas": "UAB \"Servisas 2\"",
+    "trumpasPavadinimas": "Servisas_2",
+    "adresas": "Ąžuolyno g. 5, Vilnius",
+    "latLng": {
+      "lat": 54.7080239,
+      "lng": 25.23628229999997
+    },
+    "miestas": "Vilnius",
+    "telefonas": "+370 111 11111",
+    "image": "tu_paveiksliukas.png",
+    "ivertinimas": 5,
+    "kategorijos": [
+      "vaziuokles remontas",
+      "variklio remontas"
+    ]
+  },
+  {
+    "pavadinimas": "UAB \"Servisas 3\"",
+    "trumpasPavadinimas": "Servisas_3",
+    "adresas": "Žalgirio g. 105, Vilnius",
+    "latLng": {
+      "lat": 54.7043113,
+      "lng": 25.282735199999934
+    },
+    "miestas": "Vilnius",
+    "telefonas": "+370 222 22222",
+    "image": "be_paveiksliukas.png",
+    "ivertinimas": 4.5,
+    "kategorijos": [
+      "vaziuokles remontas",
+      "variklio remontas",
+      "elektronika"
+    ]
+  },
+  {
+    "pavadinimas": "UAB \"Servisas 4\"",
+    "trumpasPavadinimas": "Servisas_4",
+    "adresas": "V. Krėvės pr. 15, Kaunas",
+    "latLng": {
+      "lat": 54.9172829,
+      "lng": 23.96118690000003
+    },
+    "miestas": "Kaunas",
+    "telefonas": "+370 222 22222",
+    "image": "kb_paveiksliukas.png",
+    "ivertinimas": 4.5,
+    "kategorijos": [
+      "elektronika",
+      "stiklu remontas"
+    ]
+  }
+]

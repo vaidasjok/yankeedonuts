@@ -1,0 +1,25 @@
+<% provide(:title, 'Puslapių apžvalga') %>
+<% provide(:page_title, 'Puslapių apžvalga') %>
+
+<p id="notice"><%= notice %></p>
+
+<div id="breadcrumb">
+  <p><a href="/users/<%= current_user.id %>">Adminitravimo pultas</a>/puslapių valdymas</p>
+</div>
+<table class='pages'>
+
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.title %></td>
+        <td><%= link_to 'Peržiūrėti', puslapis_path(page), :class => 'btn btn-default' %></td>
+        <td><%= link_to 'Koreguoti', edit_page_path(page), :class => 'btn btn-default' %></td>
+        <td><%= link_to 'Trinti', page, method: :delete, data: { confirm: 'Esate tikras, kad norite trinti?' }, :class => 'btn btn-default' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Kurti puslapį', new_page_path, :class => 'btn btn-default' %>

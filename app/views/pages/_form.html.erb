@@ -1,0 +1,69 @@
+<%= form_for(page) do |f| %>
+  <% if page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(page.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+      <ul>
+      <% page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title, 'Pavadinimas' %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :slug, 'URL' %>
+    <%= f.text_field :slug %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gallery, 'Puslapio apatinėje dalyje matysis galerija' %>
+    <%= f.check_box :gallery %>
+  </div>
+
+  <div class="field">
+    <%= f.label :catalog, 'Puslapio apatinėje dalyje matysis produktų katalogas' %>
+    <%= f.check_box :catalog %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :position, 'Pozicija (mažesnis skaičius - pirmesnis)' %>
+    <%= f.text_field :position %>
+  </div>
+
+  <div class="field form-group custom-select">
+   <%= f.label :parent, 'Priklauso meniu punktui: ' %>
+   <%= f.collection_select :parent, Page.where("id <> ?", page.id), :id, :title, prompt: '-- Nepriklauso --', :class => 'form-control custom-select', :include_blank => "--Nepriklauso--" %>
+ </div>
+
+  <div class="field">
+    <%= f.label :description, 'Aprašymas' %>
+    <%= cktext_area :page, :description, ckeditor: { uiColor: '#AADC6E', toolbar: 'mini' } %>
+ </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :seo_title, 'SEO pavadinimas' %>
+    <%= f.text_field :seo_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seo_description, 'SEO aprašymas' %>
+    <%= f.text_area :seo_description %>
+  </div>
+<!--
+  <div class="field">
+    <%= f.label :menu, 'Meniu zona' %>
+    <%= f.text_field :menu %>
+  </div>
+-->
+  <div class="actions">
+    <%= f.submit yield(:button_text) %>
+  </div>
+<% end %>

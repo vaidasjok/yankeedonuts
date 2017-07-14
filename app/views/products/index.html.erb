@@ -1,0 +1,27 @@
+<% provide(:title, 'Katalogo apžvalga') %>
+<% provide(:page_title, 'Katalogo apžvalga') %>
+
+<p id="notice"><%= notice %></p>
+
+<div id="breadcrumb">
+  <p><a href="/users/<%= current_user.id %>">Adminitravimo pultas</a>/katalogo valdymas</p>
+</div>
+
+<table>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.title %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td><%= link_to 'Peržiūrėti', product, :class => 'btn btn-default' %></td>
+        <td><%= link_to 'Koreguoti', edit_product_path(product), :class => 'btn btn-default' %></td>
+        <td><%= link_to 'Trinti', product, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Naujas produktas', new_product_path, :class => 'btn btn-default' %>

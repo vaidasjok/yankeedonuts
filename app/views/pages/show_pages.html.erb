@@ -1,0 +1,30 @@
+<% provide(:title, @page.seo_title) %>
+<% provide(:page_title, @page.seo_title) %>
+<% provide(:button_text, "Patvirtinti") %>
+
+<% if @page.gallery == true %>
+  <% content_for(:css) do %>
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+  <% end %>
+<% end %>
+
+
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<% if logged_in? %>
+  <div id="keisti_puslapi" class="margin-bottom-20">
+    <%= link_to 'Keisti puslapio nustatymus', edit_page_path(@page), class: 'btn btn-default' %>
+  </div>
+<% end %>
+
+<%=raw @page.description %>
+
+<%= render 'gallery' %>
+
+<%= render 'catalog' %>
+
+<% if (@page.slug == 'kontaktai') %>
+  <%= render('shared/contact_form') %>
+<% end %>

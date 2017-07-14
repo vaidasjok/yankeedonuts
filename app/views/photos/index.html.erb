@@ -1,0 +1,27 @@
+<% provide(:title, 'Nuotraukų sąrašas') %>
+<% provide(:page_title, 'Nuotraukų sąrašas') %>
+
+<div class = "alert alert-warning">
+  Prieš keliant nuotraukas įsitikinkite, kad yra sukurta <%= link_to 'galerija', galleries_path %>, kuriai priskirsite nuotrauką.
+</div>
+<div id="breadcrumb">
+  <p><a href="/users/<%= current_user.id %>">Adminitravimo pultas</a>/Nuotraukų valdymas</p>
+</div>
+<table class='pages'>
+
+  <tbody>
+      <% @photos.each do |photo| %>
+        <tr>
+          <td><%= Gallery.find(photo.gallery_id).title %></td>
+          <td><%= photo.title %></td>
+          <td><%= link_to image_tag(photo.image.url('small')), "/photos/#{photo.id}" %></td>
+          <td><%= link_to 'Koreguoti', edit_photo_path(photo), :class => 'btn btn-default' %></td>
+          <td><%= link_to 'Trinti', photo, method: :delete, data: { confirm: 'Esate tikras, kad norite trinti?' }, :class => 'btn btn-default' %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Kelti nuotrauką', new_photo_path, :class => 'btn btn-default' %>

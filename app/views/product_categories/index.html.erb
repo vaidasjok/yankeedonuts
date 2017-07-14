@@ -1,0 +1,26 @@
+<% provide(:title, 'Produkto kategorijos valdymas') %>
+<% provide(:page_title, 'Produkto kategorijos valdymas') %>
+<% provide(:button_text, 'Patvirtinti') %>
+
+<p id="notice"><%= notice %></p>
+
+<div id="breadcrumb">
+  <p><a href="/users/<%= current_user.id %>">Adminitravimo pultas</a>/katalogo kategorijų valdymas</p>
+</div>
+
+<table>
+  <tbody>
+    <% @product_categories.each do |product_category| %>
+      <tr>
+        <td><%= product_category.title %></td>
+        <td><%= link_to 'Rodyti', product_category, class: "btn btn-default" %></td>
+        <td><%= link_to 'Koreguoti', edit_product_category_path(product_category), class: "btn btn-default" %></td>
+        <td><%= link_to 'Trinti', product_category, method: :delete, data: { confirm: 'Ar tikrai norite trinti šią kategoriją?' }, class: "btn btn-default" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Kurti produkto kategoriją', new_product_category_path, class: "btn btn-default" %>

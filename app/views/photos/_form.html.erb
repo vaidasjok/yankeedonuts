@@ -1,0 +1,17 @@
+<%= form_for(photo, :html => {:multiple => true}) do |f| %>
+
+  <%= f.label :title, "Nuotraukos pavadinimas" %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.label :gallery_id, "Galerija" %>
+  <%= f.collection_select :gallery_id, Gallery.all, :id, :title, prompt: '-- Pasirink galeriją --', :class => 'form-control custom-select' %>
+
+  <% if (photo.image_file_name != nil) %>
+    <%= image_tag(photo.image.url('medium')) %>
+  <% end %>
+  <br>&nbsp</br>
+  <%= f.label :image, "Pasirinkite nuotrauką" %>
+  <%= f.file_field :image, class: 'form-control' %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

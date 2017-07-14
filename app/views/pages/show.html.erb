@@ -1,0 +1,16 @@
+<% provide(:title, @page.title) %>
+<% provide(:page_title, @page.title) %>
+<% provide(:button_text, "Patvirtinti") %>
+
+
+
+<p id="notice"><%= notice %></p>
+<div id="keisti_puslapi" class="margin-bottom-20">
+  <% if logged_in? %>
+    <%= link_to 'Keisti', edit_page_path(@page), class: 'btn btn-default' %>
+  <% end %>
+</div>
+<%=raw @page.description %>
+
+<%= link_to 'Koreguoti', edit_page_path(@page), :class => 'btn btn-default' %> |
+<%= link_to 'Atgal', pages_path, :class => 'btn btn-default' %>

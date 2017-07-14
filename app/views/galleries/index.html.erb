@@ -1,0 +1,23 @@
+<% provide(:title, 'Galerijų sąrašas') %>
+<% provide(:page_title, 'Galerijų sąrašas') %>
+
+
+<div id="breadcrumb">
+  <p><a href="/users/<%= current_user.id %>">Adminitravimo pultas</a>/galerijų valdymas</p>
+</div>
+<table class='pages'>
+
+  <tbody>
+    <% @galleries.each do |gallery| %>
+      <tr>
+        <td><%= gallery.title %></td>
+        <td><%= link_to 'Koreguoti', edit_gallery_path(gallery), :class => 'btn btn-default' %></td>
+        <td><%= link_to 'Trinti', gallery, method: :delete, data: { confirm: 'Esate tikras, kad norite trinti?' }, :class => 'btn btn-default' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Kurti galeriją', new_gallery_path, :class => 'btn btn-default' %>
