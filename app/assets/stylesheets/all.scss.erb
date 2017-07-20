@@ -395,10 +395,25 @@ h1 {
 
 
 /*************** MEDIA QUERIES ******************************/
+@media (max-width: 400px) {
+
+
+  .logotipas {
+    margin-top: 10px;
+    width: 150px;
+    height: 75px;
+    background-image: url("<%= asset_path("logo2.png") %>");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
 @media (max-width: 768px) {
 .paveiksliukas {
   padding: 15px 0px;
 }
+
+
 #navbar .navbar-nav {
   background-color: $dark1;
   .open > a {
@@ -418,14 +433,7 @@ h1 {
     font-weight: normal;
   }
 
-  .logotipas {
-  margin-top: 5px;
-  width: 100px;
-  height: 50px;
-  background-image: url("<%= asset_path("logo2.png") %>");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+
 }
 
 

@@ -5,4 +5,5 @@ class StaticPagesController < ApplicationController
   def partneriai
   end
 
+
 end
