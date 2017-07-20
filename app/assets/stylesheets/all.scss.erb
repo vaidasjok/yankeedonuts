@@ -75,9 +75,9 @@ footer h2, footer h3 {
   padding: 0em 0 0em;
 }
 .logotipas {
-margin-top: 15px;
+  margin-top: 50px;
   width: 200px;
-  height: 116px;
+  height: 100px;
   background-image: url("<%= asset_path("logo.png") %>");
   background-size: contain;
   background-repeat: no-repeat;
@@ -385,7 +385,10 @@ h1 {
     padding: 10px;
   }
 }
-
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-weight: 400;
+}
 
 
 
@@ -414,6 +417,15 @@ h1 {
     @include links(#fff, #fff, #fff, #fff);
     font-weight: normal;
   }
+
+  .logotipas {
+  margin-top: 5px;
+  width: 100px;
+  height: 50px;
+  background-image: url("<%= asset_path("logo2.png") %>");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 }
 
 
