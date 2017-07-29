@@ -16,7 +16,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <!--<li><% link_to 'Pradinis', root_path, :class => ap(root_path) %></li>-->
+        <li><%= link_to 'Our Work', our_work_path, :class => ap(our_work_path) %></li>
         <% menu_main_items = Page.select('title', 'slug', 'id').where(parent: nil).all.order("position ASC") %>
         <% menu_sub_items = Page.select('title', 'slug', 'id', 'parent').where.not(parent: nil).all.order("position ASC") %>
         <!-- meniu punktai ir subpunktai -->

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get  '/registruotis',  to: 'users#new'
 
-  get '/partneriai', to: 'static_pages#partneriai'
+  get '/our-work', to: 'static_pages#our_work'
   get '/kaip-tai-veikia', to: 'static_pages#kaip_tai_veikia'
 
   get    '/login',   to: 'sessions#new'
