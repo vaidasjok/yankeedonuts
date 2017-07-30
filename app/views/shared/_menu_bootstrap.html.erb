@@ -1,0 +1,50 @@
+<nav class="navbar navbar-default ">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+        <%= link_to '/' do %>
+          <div class="logotipas">
+          </div><!--logotipas-->
+        <% end %>
+
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Our Work', our_work_path, :class => ap(our_work_path) %></li>
+        <% menu_main_items = Page.select('title', 'slug', 'id').where(parent: nil).all.order("position ASC") %>
+        <% menu_sub_items = Page.select('title', 'slug', 'id', 'parent').where.not(parent: nil).all.order("position ASC") %>
+        <!-- meniu punktai ir subpunktai -->
+        <% menu_main_items.each do |item| %>
+        <% if not menu_has_children?(item.id) %>
+        <li><%= link_to item.title, puslapis_path(item.slug), :class => ap(puslapis_path(item.slug)) %></li>
+        <% end %>
+
+
+        <% if menu_has_children?(item.id) %>
+        <li class="dropdown"> <!-- jei turi priklausanciu meniu punktu-->
+          <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= item.title %> <%= fa_icon('angle-down') %></a>
+          <ul class="dropdown-menu">
+            <% menu_sub_items.each do |sub_item|  %>
+                <% if sub_item.parent == item.id %>
+                  <li><a class="<%= ap(puslapis_path(sub_item.slug)) %>" href="/<%= sub_item.slug %>"><%= sub_item.title %></a></li>
+                <% end %>
+
+            <% end %>
+            </ul>
+        </li>
+        <% end %>
+        <% end %>
+        <!-- # meniu punktai ir subpunktai -->
+        <% if logged_in? %>
+        <li><a class="pultas" href="/users/<%= current_user.id %>">PULTAS</a></li>
+        <% end %>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

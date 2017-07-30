@@ -45,3 +45,6 @@ gem "font-awesome-rails"
 gem 'ckeditor'
 gem 'paperclip'
 gem 'figaro'
+gem 'susy'
+gem 'normalize-rails'
+
