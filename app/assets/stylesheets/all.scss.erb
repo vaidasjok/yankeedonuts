@@ -242,6 +242,25 @@ nav#menu {
     z-index: 10003;
     display: block;
   }
+  #contact {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 25px;
+    padding: 2px 15px;
+    &:link, &:visited {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    background: transparent url("<%= asset_path 'contact_bg.png' %>") no-repeat left top;
+    @include susy-breakpoint(680px) {
+      display: none;
+    }
+  }
   #logo {
     background: transparent url("<%= asset_path 'logo.png' %>") no-repeat center center;
     background-size: cover;
