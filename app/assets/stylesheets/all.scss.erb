@@ -101,11 +101,50 @@ footer h2, footer h3 {
   }
 }
 #juostele_po_meniu {
+  position: relative;
   height: 18px;
   width: 100%;
+  @include susy-breakpoint(0px 420px) {
+    height: 8px;
+  }
   margin-bottom: 10px;
   background: transparent url("<%= asset_path 'juostele_po_meniu.png' %>") no-repeat center top;
   background-size: cover;
+  .star {
+    background: transparent url("<%= asset_path 'star.png' %>") no-repeat left top;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    @include susy-breakpoint(0px 420px) {
+      width: 8px;
+      height: 8px;
+    }
+    position: absolute;
+  }
+  #star1 {
+    left: 7%;
+  }
+  #star2 {
+    left: 14%;
+  }
+  #star3 {
+    left: 21%;
+  }
+  #star4 {
+    left: 29%;
+  }
+  #star5 {
+    right: 7%;
+  }
+  #star6 {
+    right: 14%;
+  }
+  #star7 {
+    right: 21%;
+  }
+  #star8 {
+    right: 29%;
+  }
 }
 nav#menu {
   height: 104px;
