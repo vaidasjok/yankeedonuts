@@ -204,12 +204,10 @@ nav#menu {
       a {
         @include span(6 of 12);
       }
-      a.last {
+      a.second {
         display: none;
       }
-      a.second {
-        @include last;
-      }
+
     }
 
   }
@@ -242,19 +240,22 @@ nav#menu {
     z-index: 10003;
     display: block;
   }
-  #contact {
+  #delivery {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
     width: 90px;
-    height: 25px;
-    padding: 2px 15px;
+    height: 45px;
+    padding: 10px 15px;
     &:link, &:visited {
       color: #fff;
       text-decoration: none;
       font-size: 14px;
       text-transform: uppercase;
+    }
+    &:hover, &active {
+      background: transparent url("<%= asset_path 'contact_bg_hover.png' %>") no-repeat left top;
     }
     background: transparent url("<%= asset_path 'contact_bg.png' %>") no-repeat left top;
     @include susy-breakpoint(680px) {
