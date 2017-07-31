@@ -21,40 +21,42 @@
   </head>
 
   <body class="" >
-    <section id="header">
-      <a href="/"><div id="logo"></div></a>
-      <nav>
-        <%= render('shared/menu') %>
-      </nav>
-    </section>
-    <div id="juostele_po_meniu">
-      <div id="star1" class="star"></div>
-      <div id="star2" class="star"></div>
-      <div id="star3" class="star"></div>
-      <div id="star4" class="star"></div>
-      <div id="star5" class="star"></div>
-      <div id="star6" class="star"></div>
-      <div id="star7" class="star"></div>
-      <div id="star8" class="star"></div>
-    </div>
+    <div id="wrap">
+      <section id="header">
+        <a href="/"><div id="logo"></div></a>
+        <nav>
+          <%= render('shared/menu') %>
+        </nav>
+      </section>
+      <div id="juostele_po_meniu">
+        <div id="star1" class="star"></div>
+        <div id="star2" class="star"></div>
+        <div id="star3" class="star"></div>
+        <div id="star4" class="star"></div>
+        <div id="star5" class="star"></div>
+        <div id="star6" class="star"></div>
+        <div id="star7" class="star"></div>
+        <div id="star8" class="star"></div>
+      </div>    
+
+      <div class="ribbon first wide"></div>
+
+      <section id="content">
+
+        <%= yield %>
+      </section>
+      
 
 
-    <div class="ribbon first wide"></div>
+      <!-- prideti footer ir scripts -->
 
-    <section id="content">
+      <%= render('layouts/footer.html.erb') %>
 
-      <%= yield %>
-    </section>
-    
-
-
-    <!-- prideti footer ir scripts -->
-
-    <%= render('layouts/footer.html.erb') %>
-
-    <%= debug(params) if Rails.env.development? %>
-    <script src="https://use.fontawesome.com/4b67208f55.js"></script>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= csrf_meta_tags %>
+      <%= debug(params) if Rails.env.development? %>
+      <script src="https://use.fontawesome.com/4b67208f55.js"></script>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= csrf_meta_tags %>
+    </div><!-- #wrap -->
   </body>
+
 </html>

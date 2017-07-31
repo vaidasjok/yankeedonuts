@@ -45,16 +45,22 @@ $salotine: #71e4bd;
 
 
 body {
-  @include container(980px);
+
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   text-align: justify;
   font-size: 17px;
   color: #000;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
   padding-top: 0px;
   margin-top: 0px;
+  font-size: 17px;
+}
+#top1 {
+  @include susy-breakpoint(670px ) {
+    @include container(960px);
+  }
 }
 p {
   text-align: justify;
@@ -106,8 +112,9 @@ footer h2, footer h3 {
   width: 100%;
   @include susy-breakpoint(0px 420px) {
     height: 8px;
+    margin-bottom: 8px;
   }
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   background: transparent url("<%= asset_path 'juostele_po_meniu.png' %>") no-repeat center top;
   background-size: cover;
   .star {
@@ -153,6 +160,15 @@ nav#menu {
   }
   ul li {
     display: inline-block;
+    a:link, a:visited {
+      color:#fff;
+      text-decoration: none;
+      font-size: 22px;
+    }
+    a:hover, a:active {
+      color:#fff;
+      text-decoration: none;
+    }
   }
 }
 #header {
