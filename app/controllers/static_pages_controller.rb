@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+  
+layout "layout2", :only => [ :our_work, :contact, :delivery, :events ]
+
   def home
   end
 
