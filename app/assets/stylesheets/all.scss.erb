@@ -53,6 +53,8 @@ body {
   color: #000;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 0px;
+  margin-top: 0px;
 }
 p {
   text-align: justify;
@@ -88,8 +90,59 @@ footer h2, footer h3 {
   max-width: 100%;
 }
 #slider {
+  z-index: 999;
+}
+#slide {
   width: 960px;
   max-width: 100%;
+  z-index: 999;
+  img {
+    z-index: 999;
+  }
+}
+#juostele_po_meniu {
+  height: 18px;
+  width: 100%;
+  margin-bottom: 10px;
+  background: transparent url("<%= asset_path 'juostele_po_meniu.png' %>") no-repeat center top;
+  background-size: cover;
+}
+nav#menu {
+  height: 104px;
+  ul {
+    margin-top: 0px;
+  }
+  ul li {
+    display: inline-block;
+  }
+}
+#header {
+  position: relative;
+  display: block;
+  margin: 0px;
+  height: 104px;
+  padding-top: 15px;
+  background: transparent url("<%= asset_path 'header_bg.png' %>") repeat left top;
+  z-index: 10001;
+  #logo {
+    background: transparent url("<%= asset_path 'logo.png' %>") no-repeat center center;
+    background-size: cover;
+    width: 161px;
+    height: 153px;
+    @include susy-breakpoint(0px 670px) {
+      width: 90px;
+      height: 85px;
+      top: 50px;
+    }
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    z-index: auto;
+  }
 }
 
 /* miscellaneous */
