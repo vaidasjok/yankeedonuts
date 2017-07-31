@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/our-work', to: 'static_pages#our_work'
   get '/kaip-tai-veikia', to: 'static_pages#kaip_tai_veikia'
   get '/contact', to: 'static_pages#contact'
+  get '/delivery', to: 'static_pages#delivery'
+  get '/events', to: 'static_pages#events'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

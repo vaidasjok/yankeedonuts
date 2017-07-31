@@ -4,6 +4,13 @@
 
 @import "susy";
 
+$susy: (
+  global-box-sizing: border-box,
+  use-custom: (rem: true
+    )
+  );
+
+@include border-box-sizing;
 
 
 $a-tags: 'a:link, a:visited';
@@ -38,6 +45,7 @@ $salotine: #71e4bd;
 
 
 body {
+  @include container(1200px);
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   text-align: justify;
