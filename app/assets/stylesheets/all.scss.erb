@@ -154,21 +154,74 @@ footer h2, footer h3 {
   }
 }
 nav#menu {
+  text-transform: uppercase;
+  position: relative;
   height: 104px;
-  ul {
-    margin-top: 0px;
+  @include susy-breakpoint(0px 679px) {
+    /*display: none;*/
   }
-  ul li {
-    display: inline-block;
-    a:link, a:visited {
-      color:#fff;
-      text-decoration: none;
-      font-size: 22px;
+
+  .left-side {
+    position: absolute;
+    bottom: 20px;
+
+    left: 20px;
+    width: 40%;
+    @include susy-breakpoint(0px 679px) {
+      left: 0px;
+      width: 35%
     }
-    a:hover, a:active {
-      color:#fff;
-      text-decoration: none;
+    a {
+      float: right;
+      @include span(6 of 12);
+      text-align: center;
     }
+    a.last {
+      @include last;
+    }
+    
+  }
+  .right-side {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+    width: 40%;
+
+    a {
+      float: right;
+      @include span(4 of 12);
+      text-align: center;
+    }
+    a.last {
+      @include last;
+    }
+    @include susy-breakpoint(0px 679px) {
+      right: 0px;
+      width: 35%;
+      a {
+        @include span(6 of 12);
+      }
+      a.last {
+        display: none;
+      }
+      a.second {
+        @include last;
+      }
+    }
+  }
+  a:link, a:visited {
+    display: block;
+    color:#fff;
+    text-decoration: none;
+    font-size: 22px;
+    @include susy-breakpoint(0px 820px) {
+      font-size: 18px;
+    }
+  }
+  a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+    background-color: transparent;
   }
 }
 #header {
@@ -184,7 +237,7 @@ nav#menu {
     background-size: cover;
     width: 161px;
     height: 153px;
-    @include susy-breakpoint(0px 670px) {
+    @include susy-breakpoint(0px 862px) {
       width: 90px;
       height: 85px;
       top: 50px;
