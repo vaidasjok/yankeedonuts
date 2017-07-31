@@ -47,4 +47,5 @@ gem 'paperclip'
 gem 'figaro'
 gem 'susy'
 gem 'normalize-rails'
+gem 'nivo-rails'
 

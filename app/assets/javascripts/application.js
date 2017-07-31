@@ -15,11 +15,14 @@
 //= require jquery_ujs
 //= require ckeditor/init
 //= require turbolinks
-//= require bootstrap
-//= require bootstrap-sprockets
-//= require fotorama.js
+//= require nivo
 
 
-$(document).on('turbolinks:load', function() {
-    $('.dropdown-toggle').dropdown();
+
+$(document).on('turbolinks:load', function () {
+  $('#slider').nivoSlider({
+  	directionNav: false,
+  	controlNav: false
+
+  });
 });

@@ -26,8 +26,12 @@
         <%= render('shared/menu') %>
       </nav>
     </section>
-    <section id="slide">
       
+    <section id="slide">
+      <%= nivo_slider id: "slider" do %>
+        <%= image_tag "slides/slide1.jpg", alt: "A very nice photo!" %>
+         <%= image_tag "slides/slide2.jpg", alt: "A very nice photo!" %>
+      <% end %>
     </section>
 
     <div class="ribbon first wide"></div>

@@ -125,6 +125,7 @@ GEM
     multi_json (1.12.1)
     nenv (0.3.0)
     nio4r (1.2.1)
+    nivo-rails (1.0.1)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     normalize-rails (4.1.1)
@@ -240,6 +241,7 @@ DEPENDENCIES
   jquery-turbolinks
   listen (= 3.0.8)
   minitest-reporters (= 1.1.9)
+  nivo-rails
   normalize-rails
   paperclip
   puma (= 3.4.0)
