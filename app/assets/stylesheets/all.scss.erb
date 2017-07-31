@@ -153,6 +153,9 @@ footer h2, footer h3 {
     right: 29%;
   }
 }
+nav {
+  z-index: 10001;
+}
 nav#menu {
   text-transform: uppercase;
   position: relative;
@@ -160,7 +163,7 @@ nav#menu {
   @include susy-breakpoint(0px 679px) {
     /*display: none;*/
   }
-
+  z-index: 10001;
   .left-side {
     position: absolute;
     bottom: 20px;
@@ -169,7 +172,7 @@ nav#menu {
     width: 40%;
     @include susy-breakpoint(0px 679px) {
       left: 0px;
-      width: 35%
+      width: 40%
     }
     a {
       float: right;
@@ -185,10 +188,10 @@ nav#menu {
    position: absolute;
    bottom: 20px;
    right: 20px;
-    width: 40%;
+   width: 40%;
 
     a {
-      float: right;
+      float: left;
       @include span(4 of 12);
       text-align: center;
     }
@@ -197,7 +200,7 @@ nav#menu {
     }
     @include susy-breakpoint(0px 679px) {
       right: 0px;
-      width: 35%;
+      width: 40%;
       a {
         @include span(6 of 12);
       }
@@ -208,6 +211,7 @@ nav#menu {
         @include last;
       }
     }
+
   }
   a:link, a:visited {
     display: block;
@@ -216,6 +220,9 @@ nav#menu {
     font-size: 22px;
     @include susy-breakpoint(0px 820px) {
       font-size: 18px;
+    }
+    @include susy-breakpoint(0px 450px) {
+      font-size: 14px;
     }
   }
   a:hover, a:active {
@@ -232,6 +239,10 @@ nav#menu {
   padding-top: 15px;
   background: transparent url("<%= asset_path 'header_bg.png' %>") repeat left top;
   z-index: 10001;
+  a {
+    z-index: auto;
+    display: block;
+  }
   #logo {
     background: transparent url("<%= asset_path 'logo.png' %>") no-repeat center center;
     background-size: cover;
