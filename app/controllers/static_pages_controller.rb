@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   
-layout "layout2", :only => [ :our_work, :contact, :delivery, :events ]
+layout "layout2", :only => [ :our_work, :contact, :delivery, :events, :menu ]
 
   def home
   end
@@ -15,6 +15,9 @@ layout "layout2", :only => [ :our_work, :contact, :delivery, :events ]
   end
 
   def events
+  end
+
+  def menu
   end
 
 end

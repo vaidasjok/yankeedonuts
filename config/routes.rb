@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/delivery', to: 'static_pages#delivery'
   get '/events', to: 'static_pages#events'
+  get '/menu', to: 'static_pages#menu'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

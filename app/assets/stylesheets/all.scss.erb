@@ -59,8 +59,20 @@ body {
 }
 #top1 {
   @include susy-breakpoint(670px ) {
-    @include container(960px);
+    @include container(1024px);
   }
+}
+#top2 {
+  @include susy-breakpoint(670px ) {
+    @include container(1024px);
+  }
+}
+.ribbon.first.wide {
+  height: 34px;
+  width: 100%;
+  margin-top: 13px;
+  display: block;
+  background: transparent url("<%= asset_path("wide-star-line-bg.png") %>") repeat-x top left;
 }
 p {
   text-align: justify;
@@ -99,7 +111,7 @@ footer h2, footer h3 {
   z-index: 999;
 }
 #slide {
-  width: 960px;
+  width: 1024px;
   max-width: 100%;
   z-index: 999;
   img {
