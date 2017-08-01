@@ -106,11 +106,60 @@ body {
   }
 }
 .ribbon.first.wide {
+  position: relative;
   height: 34px;
   width: 100%;
   margin-top: 13px;
   display: block;
   background: transparent url("<%= asset_path("wide-star-line-bg.png") %>") repeat-x top left;
+  .star {
+    background: transparent url("<%= asset_path("star.png") %>") no-repeat top left;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    background-size: cover;
+    display: block;
+    top: 9px;
+    @include susy-breakpoint(0px 420px) {
+      width: 12px;
+      height: 12px;
+      top: 11px;
+    }
+    &.star1 {
+      left: 3.42%;
+    }
+    &.star2 {
+      left: 12.57%;
+    }
+    &.star3 {
+      left: 21.72%;
+    }
+    &.star4 {
+      left: 30.87%;
+    }
+    &.star5 {
+      left: 40.02%;
+    }
+    &.star6 {
+      left: 49.17%;
+    }
+    &.star7 {
+      left: 58.32%;
+    }
+    &.star8 {
+      left: 67.47%;
+    }
+    &.star9 {
+      left: 76.62%;
+    }
+    &.star10 {
+      left: 85.77%;
+    }
+    &.star11 {
+      left: 94.92%;
+    }
+  }
+
 }
 p {
   text-align: justify;
@@ -343,6 +392,8 @@ nav#menu {
     z-index: 10003;
   }
 }
+
+
 
 /* miscellaneous */
 
