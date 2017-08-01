@@ -245,9 +245,13 @@ nav#menu {
   position: relative;
   display: block;
   margin: 0px;
-  height: 104px;
-  padding-top: 15px;
+  margin-bottom: 13px;
+  height: 122px;
+  padding-top: 0px;
   background: transparent url("<%= asset_path 'header_bg.png' %>") repeat left top;
+  .header-inner {
+    @include container(1024px);
+  }
   a {
     z-index: 10003;
     display: block;
