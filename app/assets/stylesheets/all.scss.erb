@@ -109,6 +109,7 @@ body {
   position: relative;
   height: 34px;
   width: 100%;
+
   margin-top: 13px;
   display: block;
   background: transparent url("<%= asset_path("wide-star-line-bg.png") %>") repeat-x top left;
@@ -393,8 +394,40 @@ nav#menu {
   }
 }
 
-
-
+#events-banner {
+  width: 100%;
+  position: relative;
+  height: 250px;
+  margin-top: 13px;
+  background: transparent url("<%= asset_path 'events_banner.jpg' %>") no-repeat center top;
+  background-size: cover;
+  h2 {
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    font-size: 38px;
+    padding: 0.5em 0;
+  }
+  a.learn-more:link, a.learn-more:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px 40px;
+    background-color: #9d2020;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  a.learn-more:hover, a.learn-more:active {
+    background-color: #821a1a;
+  }
+}
+.wide {
+  @include container(1024px);
+}
 /* miscellaneous */
 
 .debug_dump {
