@@ -435,7 +435,22 @@ nav#menu {
 .wide {
   @include container(1024px);
 }
-
+footer {
+  position: relative;
+  margin-top: 200px;
+    #footer-donut {
+      position: absolute;
+      top: -110px;
+      left: 0;
+      right: 0;
+      with: 161px;
+      height: 153px;
+      margin: 0 auto -20px;
+      background: transparent url('<%= asset_path 'footer_donut_bg.png' %>') no-repeat center top;
+      z-index: 30000;
+      display: block;
+  }
+}
 .footer {
   border: 8px solid #8d1010;
   border-left: none;
@@ -554,7 +569,27 @@ nav#menu {
     }
   }
 }
-
+.stars-colored {
+  width: 90%;
+  margin: 20px auto;
+  display: block;
+  .star {
+    @include span(1 of 10);
+    display: block;
+    height: 16px;
+  }
+  .star.last {
+    @include last;
+  }
+  .star.red {
+    background: transparent url('<%= asset_path 'star_red_bg.png' %>') no-repeat center center;
+    height: 33px;
+  }
+  .star.blue {
+    background: transparent url('<%= asset_path 'star_blue_bg.png' %>') no-repeat center center;
+    height: 33px;
+  }
+}
 
 /* miscellaneous */
 
