@@ -80,6 +80,13 @@ $salotine: #71e4bd;
     }
 }
 
+a:link, a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover, a:active {
+  background-color: none;
+}
 
 
 body {
@@ -428,6 +435,87 @@ nav#menu {
 .wide {
   @include container(1024px);
 }
+
+.footer {
+  border: 8px solid #8d1010;
+  border-left: none;
+  border-right: none;
+  font-family: "Futura Bk BT Book";
+  #footer-logo {
+      margin-top: 2em;
+      margin-left: 10px;
+      width: 100%;
+      max-width: 259px;
+      height: 97px;
+      display: block;
+      background-image: url('<%= asset_path 'footer-logo.png' %>');
+      background-repeat:no-repeat;
+      background-size: contain;
+      background-position:center;
+      &:hover, &:active {
+        background-color: transparent;
+      }
+    }
+  .footer-inner {
+    background-color: #766e84;
+    height: 276px;
+    @include susy-breakpoint(0px 730px) {
+      height: auto;
+    }
+    width: 100%;
+    border: 10px solid #311957;
+    border-left: none;
+    border-right: none;
+    .footer-inner-content {
+      @include container(1024px);
+      .footer-inner-1, .footer-inner-2, .footer-inner-3 {
+        @include span(4 of 12);
+        padding: 10px;
+        @include susy-breakpoint(0px 730px) {
+          @include span(12 of 12);
+        }
+        p {
+          padding: 10px 10px 10px 50px;
+          @include susy-breakpoint(0px 844px) {
+            padding-left: 40px;
+            font-size: 14px;
+          }
+          color: #fff;
+          font-size: 20px;
+          @include susy-breakpoint(0px 920px) {
+            font-size: 18px;
+          }
+          &.address {
+            background: transparent url('<%= asset_path 'address_bg.png' %>') no-repeat left 10px;
+            background-size: 40px;
+            @include susy-breakpoint(0px 844px) {
+              background-size: 30px;
+            }
+          }
+          &.email {
+            background: transparent url('<%= asset_path 'email_bg.png' %>') no-repeat left 10px;
+            background-size: 40px;
+            @include susy-breakpoint(0px 844px) {
+              background-size: 30px;
+            }
+          }
+          &.phone {
+            background: transparent url('<%= asset_path 'phone_bg.png' %>') no-repeat left 10px;
+            background-size: 40px;
+            @include susy-breakpoint(0px 844px) {
+              background-size: 30px;
+            }
+          }
+        }
+      }
+      .footer-inner-3 {
+        @include last;
+      }
+    }
+  }
+}
+
+
 /* miscellaneous */
 
 .debug_dump {
