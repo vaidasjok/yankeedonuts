@@ -13,6 +13,44 @@ $susy: (
 @include border-box-sizing;
 
 
+
+@font-face {
+  font-family: "Futura Md BT Medium";
+  src: url('/assets/tt0142m_.ttf') format('truetype');
+  font-weight: medium;
+}
+@font-face {
+  font-family: "Futura Md BT Medium Italic";
+  src: url('/assets/tt0143m_.ttf') format('truetype');
+  font-weight: medium;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Futura Md BT Bold";
+  src: url('/assets/tt0144m_.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura Md BT Bold Italic";
+  src: url('/assets/tt0145m_.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Futura Bk BT Book";
+  src: url('/assets/tt0140m_.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura Bk BT Book Italic";
+  src: url('/assets/tt0141m_.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
 $a-tags: 'a:link, a:visited';
 $a-tags-hover: 'a:active, a:hover';
 
@@ -47,7 +85,7 @@ $salotine: #71e4bd;
 body {
 
   background-color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Futura Md BT Medium', 'Open Sans', sans-serif;
   text-align: justify;
   font-size: 17px;
   color: #000;
@@ -88,13 +126,14 @@ h1 {
   font-weight: bold;
   font-size: 24px;
   text-align: center;
-
+  
 }
 h2, h3 {
   padding: 1em 0 1em;
 }
 footer h2, footer h3 {
   padding: 0em 0 0em;
+  font-family: "Futura Md BT Bold Italic";
 }
 .logotipas {
   margin-top: 50px;

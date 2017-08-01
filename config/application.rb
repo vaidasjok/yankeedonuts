@@ -14,3 +14,7 @@ module Pasauliobamba2
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+# Enable the asset pipeline
+config.assets.enabled = true
+config.assets.paths << Rails.root.join('/app/assets/fonts')
