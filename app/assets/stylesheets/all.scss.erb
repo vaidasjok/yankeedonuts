@@ -400,7 +400,28 @@ nav#menu {
     z-index: 10003;
   }
 }
-
+#donut-kinds {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  .kind1, .kind2, .kind3 {
+    position: relative;
+    width: 32.486979166667%;
+    padding-top: 31.45%;
+    float: left; 
+    margin-right: 1.26953125%; 
+    background-size: contain;
+  }
+  .kind1 {
+    background: transparent url("<%= asset_path 'donut_kind1_bg.jpg' %>") no-repeat center top;
+  }
+  .kind2 {
+    background: transparent url("<%= asset_path 'donut_kind2_bg.jpg' %>") no-repeat center top;
+  }
+  .kind3 {
+    margin-right: 0px;
+    background: transparent url("<%= asset_path 'donut_kind3_bg.jpg' %>") no-repeat center top;
+  }
+}
 #events-banner {
   width: 100%;
   position: relative;
