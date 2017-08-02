@@ -472,6 +472,30 @@ nav#menu {
   a.learn-more:hover, a.learn-more:active {
     background-color: #821a1a;
   }
+  #just-eat {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    @include susy-breakpoint(0px 679px) {
+      top: 65%;
+      left: 10%
+    }
+    width: 98px;
+    height: 98px;
+    background: transparent url("<%= asset_path 'just_eat_bg.png' %>") no-repeat center top;    
+  }
+    #deliveroo {
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    @include susy-breakpoint(0px 679px) {
+      top: 65%;
+      left: 30%;
+    }
+    width: 99px;
+    height: 99px;
+    background: transparent url("<%= asset_path 'deliveroo_bg.png' %>") no-repeat center top;    
+  }
 }
 
 .wide {
