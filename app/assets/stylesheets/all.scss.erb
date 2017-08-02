@@ -432,6 +432,48 @@ nav#menu {
     background-color: #821a1a;
   }
 }
+#delivery-banner {
+  width: 100%;
+  position: relative;
+  height: 340px;
+  margin-top: 13px;
+  background: transparent url("<%= asset_path 'delivery_banner.jpg' %>") no-repeat center top;
+  background-size: cover;
+  h2 {
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    @include susy-breakpoint(0px 679px) {
+      top: 0%;
+      left: 10%;
+    }
+    top: 10%;
+    left: 30%;
+    font-size: 30px;
+    font-family: "Futura Bk BT Book";
+    padding: 0.5em 0;
+  }
+  a.order-online:link, a.order-online:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px 40px;
+    border: 5px solid #fff;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    @include susy-breakpoint(0px 679px) {
+      top: 40%;
+      left: 10%;
+    }
+  }
+  a.learn-more:hover, a.learn-more:active {
+    background-color: #821a1a;
+  }
+}
+
 .wide {
   @include container(1024px);
 }
