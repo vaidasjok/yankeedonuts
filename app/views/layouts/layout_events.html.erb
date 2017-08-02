@@ -74,25 +74,46 @@
     <div class="form-events">
       <div class="form-inner">
         <h2>Get In Touch</h2>
-        <%= form_tag("/send-mail", method: "post") do %>
-          <%= label_tag(:name, "Full Name") %>
-          <%= text_field_tag(:name) %>
+        <%= form_tag("/send-mail-events", method: "post") do %>
 
-          <%= label_tag(:phone, "Phone") %>
-          <%= text_field_tag(:phone) %>
+        <div class="first-group big-group">
+          <div class="name-group">
+            <%= label_tag(:name, "Full Name") %>
+            <%= text_field_tag(:name) %>
+          </div>
+          
+          <div class="phone-group">
+            <%= label_tag(:phone, "Phone") %>
+            <%= text_field_tag(:phone) %>
+          </div>
 
+         <div class="email-group">
           <%= label_tag(:email, "E-mail") %>
           <%= text_field_tag(:email) %>
+         </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="second-group big-group">
+          <div class=date-group>
+            <%= label_tag(:date, "Ocassion Date") %>
+            <%= text_field_tag(:date) %>
+           </div>
 
+          <div class="time-group">
+            <%= label_tag(:time, "Ocassion Time") %>
+            <%= text_field_tag(:time) %>
+          </div>
+        </div>
+        
+        <div class="third-group big-group">
+          <div class="comments-group">
+            <%= label_tag(:comments, "Comments") %>
+            <%= text_area_tag(:comments) %>
+          </div>
+        </div>
+          
+          
 
-          <%= label_tag(:date, "Ocassion Date") %>
-          <%= text_field_tag(:date) %>
-
-          <%= label_tag(:time, "Ocassion Time") %>
-          <%= text_field_tag(:time) %>
-
-          <%= label_tag(:comments, "Comments") %>
-          <%= text_area_tag(:comments) %>
           <%= submit_tag "Submit", class: '' %>
         <% end %>
       </div>

@@ -834,12 +834,46 @@ body.events {
       @include container(1024px);
       padding: 20px;
       font-size: 20px;
+      label {
+        text-align: left;
+      }
       input, textarea {
         border-radius: 10px;
         border-color: #cdcdcd;
         padding: 10px;
         display: block;
         background-color: #cdcdcd;
+      }
+      .name-group, .phone-group, .email-group {
+        width: 30%;
+        margin-right: 5%;
+        float: left;
+      }
+      .email-group {
+        margin-right: 0px;
+      }
+      .date-group, .time-group {
+        width: 30%;
+        margin-right: 5%;
+        text-align: center;
+        display: inline-block;
+      }
+      .time-group {
+        margin-right: 0px;
+      }
+      .second-group {
+        text-align: center;
+      }
+      .comments-group {
+        width: 40%;
+        display: inline-block;
+        
+      }
+      .third-group {
+        text-align: center;
+      }
+      .big-group {
+        margin-top: 20px;
       }
       input[type=submit] {
         color: #fff;
@@ -850,6 +884,15 @@ body.events {
         margin: 0 auto;
         font-size: 20px;
         text-transform: uppercase;
+      }
+      @include susy-breakpoint(0px 700px) {
+        .name-group, .phone-group, .email-group, .date-group, .time-group, .comments-group {
+          text-align: initial;
+          float: initial;
+          width: initial;
+          margin: initial;
+          display: initial;
+        }
       }
     }
   }
@@ -865,6 +908,8 @@ body.events {
   margin-top: 45px;
 
 }
-
+.clearfix {
+  @include susy-clearfix;
+}
 
 
