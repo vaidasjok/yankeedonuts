@@ -822,8 +822,35 @@ body.events {
     background: transparent url('<%= asset_path 'form_bg.png' %>') no-repeat center center;
     background-size: cover;
     min-height: 450px;
+    color: #fff;
+    h2 {
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Futura Bk BT Book";
+    }
     .form-inner {
       @include container(1024px);
+      padding: 20px;
+      font-size: 20px;
+      input, textarea {
+        border-radius: 10px;
+        border-color: #cdcdcd;
+        padding: 10px;
+        display: block;
+        background-color: #cdcdcd;
+      }
+      input[type=submit] {
+        color: #fff;
+        background-color: transparent;
+        border: 3px solid #fff;
+        border-radius: 0px;
+        width: 200px;
+        margin: 0 auto;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
     }
   }
 }

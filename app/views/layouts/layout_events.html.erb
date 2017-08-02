@@ -73,7 +73,28 @@
       
     <div class="form-events">
       <div class="form-inner">
-        
+        <h2>Get In Touch</h2>
+        <%= form_tag("/send-mail", method: "post") do %>
+          <%= label_tag(:name, "Full Name") %>
+          <%= text_field_tag(:name) %>
+
+          <%= label_tag(:phone, "Phone") %>
+          <%= text_field_tag(:phone) %>
+
+          <%= label_tag(:email, "E-mail") %>
+          <%= text_field_tag(:email) %>
+
+
+          <%= label_tag(:date, "Ocassion Date") %>
+          <%= text_field_tag(:date) %>
+
+          <%= label_tag(:time, "Ocassion Time") %>
+          <%= text_field_tag(:time) %>
+
+          <%= label_tag(:comments, "Comments") %>
+          <%= text_area_tag(:comments) %>
+          <%= submit_tag "Submit", class: '' %>
+        <% end %>
       </div>
     </div>
 
