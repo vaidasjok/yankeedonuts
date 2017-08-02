@@ -32,7 +32,7 @@ private
     when "events"
       "layout_events"
     else
-      "layout2"
+      "layout_all"
     end
   end
 
