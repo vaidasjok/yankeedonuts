@@ -818,6 +818,14 @@ body.events {
     text-transform: uppercase;
     margin-top: 27px;
   }
+  .form-events {
+    background: transparent url('<%= asset_path 'form_bg.png' %>') no-repeat center center;
+    background-size: cover;
+    min-height: 450px;
+    .form-inner {
+      @include container(1024px);
+    }
+  }
 }
 
 
