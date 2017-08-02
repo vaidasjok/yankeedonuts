@@ -506,10 +506,86 @@ nav#menu {
     }
     width: 99px;
     height: 99px;
-    background: transparent url("<%= asset_path 'deliveroo_bg.png' %>") no-repeat center top;    
+    background: transparent url("<%= asset_path 'deliveroo_bg.png' %>") no-repeat center top;
+
   }
 }
 
+#twitter {
+margin-top: 13px;
+display: block;
+  .left {
+    max-width: 100%;
+    width: 35.44%;
+    @include susy-breakpoint(0px 620px) {
+      width: 50%;
+    }
+    @include susy-breakpoint(621px 833px) {
+      width: 40%;
+    }
+    float: left;
+    .content {
+      width: 363px;
+      height: 327px;
+      max-width: 100%;
+      background: transparent url("<%= asset_path 'twitter_bg1.jpg' %>") no-repeat center top; 
+      background-size: contain;
+    }
+
+  }
+  .middle {
+    width: 298px;
+    width: 29.10%;
+    @include susy-breakpoint(0px 620px) {
+      width: 50%;
+    }
+    @include susy-breakpoint(621px 833px) {
+      width: 60%;
+    }
+    height: 327px;
+    display: block;
+    float: left;
+    padding: 20px;
+    .invitation {
+      color: #170f34;
+      font-family: "Futura Bk BT Book";
+      font-size: 30px;
+      @include susy-breakpoint(0px 430px) {
+        font-size: 18px;
+      }
+      @include susy-breakpoint(431px 540px) {
+        font-size: 22px;
+      }
+      text-align: center;
+    }
+    .twitter-address {
+      text-align: center;
+      color: #170f34;
+      font-family: "Futura Bk BT Book";
+      font-size: 20px;
+      @include susy-breakpoint(0px 540px) {
+        font-size: 16px;
+      }
+      text-align: center;
+    }
+  }
+  .right {
+    max-width: 100%;
+    width: 35.44%;
+    float: left;
+    @include susy-breakpoint(0px 833px) {
+      display: none;
+    }
+    .content {
+      width: 363px;
+      height: 327px;
+      max-width: 100%;
+      background: transparent url("<%= asset_path 'twitter_bg2.jpg' %>") no-repeat center top; 
+      background-size: contain;
+
+    }
+  }
+}
 .wide {
   @include container(1024px);
 }
@@ -649,6 +725,7 @@ footer {
 }
 .stars-colored {
   width: 90%;
+  height: 33px;
   margin: 20px auto;
   display: block;
   .star {
