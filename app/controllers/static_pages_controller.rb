@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   
-layout "layout2", :only => [ :our_work, :contact, :delivery, :events, :menu ]
+layout :resolve_layout
 
   def home
   end
@@ -19,5 +19,22 @@ layout "layout2", :only => [ :our_work, :contact, :delivery, :events, :menu ]
 
   def menu
   end
+
+
+private
+
+  def resolve_layout
+    case action_name
+    when "home"
+      "application"
+    when "delivery"
+      "layout2"
+    when "events"
+      "layout_events"
+    else
+      "layout2"
+    end
+  end
+
 
 end
