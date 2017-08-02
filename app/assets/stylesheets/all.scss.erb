@@ -95,7 +95,7 @@ body {
   font-family: 'Futura Md BT Medium', 'Open Sans', sans-serif;
   text-align: justify;
   font-size: 17px;
-  color: #000;
+  color: #170f34;
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 0px;
@@ -919,7 +919,16 @@ section.content {
   @include container(1024px);
   padding: 0px 10px 40px;
 }
-
+body.contact {
+  section.content {
+    a:link, a:visited {
+      color: #170f34;
+    }
+    a:hover, a:active {
+      color: #fff;
+    }
+  }
+}
 
 
 /* miscellaneous */
