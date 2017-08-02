@@ -513,6 +513,8 @@ nav#menu {
 
 #twitter {
 margin-top: 13px;
+width: 1024px;
+max-width: 100%;
 display: block;
   .left {
     max-width: 100%;
@@ -526,10 +528,12 @@ display: block;
     float: left;
     .content {
       width: 363px;
-      height: 327px;
+      /*height: 327px;*/
+      padding-top: 90.08%;
       max-width: 100%;
       background: transparent url("<%= asset_path 'twitter_bg1.jpg' %>") no-repeat center top; 
       background-size: contain;
+
     }
 
   }
@@ -542,7 +546,7 @@ display: block;
     @include susy-breakpoint(621px 833px) {
       width: 60%;
     }
-    height: 327px;
+    padding-top: 31.93%;
     display: block;
     float: left;
     padding: 20px;
@@ -578,7 +582,7 @@ display: block;
     }
     .content {
       width: 363px;
-      height: 327px;
+      padding-top: 90.08%;
       max-width: 100%;
       background: transparent url("<%= asset_path 'twitter_bg2.jpg' %>") no-repeat center top; 
       background-size: contain;
