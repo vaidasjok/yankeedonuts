@@ -823,8 +823,11 @@ footer {
   }
 }
 body.events {
+  #header {
+    margin-bottom: 0px;
+  }
   #main-image {
-    margin-top: 13px;
+    margin-top: 0px;
     @include container(1024px);
     padding-top: 45.8984375%;
     display: block;
@@ -919,7 +922,7 @@ body.events {
 }
 body.all {
   #main-image {
-    margin-top: 13px;
+    margin-top: 0px;
     @include container(1024px);
     padding-top: 45.8984375%;
     display: block;
@@ -934,7 +937,26 @@ body.all {
     margin-top: 27px;
   }
 }
-
+body.all.menu {
+  #header {
+    margin-bottom: 0px;
+  }
+  #main-image {
+    margin-top: 0px;
+    @include container(1024px);
+    padding-top: 45.8984375%;
+    display: block;
+    background: transparent url('<%= asset_path 'menu_main_image.jpg' %>') no-repeat center center;
+    background-size: contain;
+  }
+  h1 {
+    color: #1e173a;
+    font-size: 40px;
+    font-family: "Futura Bk BT Book";
+    text-transform: uppercase;
+    margin-top: 27px;
+  }
+}
 section.content {
   @include container(1024px);
   padding: 0px 10px 40px;
