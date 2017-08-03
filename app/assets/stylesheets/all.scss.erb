@@ -950,6 +950,72 @@ body.contact {
   }
 }
 
+.contact-wrapper {
+  padding: 20px 10px;
+}
+
+#contact-map {
+  @include span(12 of 12);
+  min-height: 50px;
+  background-color: transparent;
+  margin-bottom: 30px;
+}
+
+
+/***********FORMA*****************/
+.contact-left, .contact-right {
+  @include span(6 of 12);
+  @include susy-breakpoint(0px 677px) {
+    @include span(12 of 12);
+  }
+}
+.contact-right {
+  @include susy-breakpoint(0px 677px) {
+    margin-top: 30px;
+  }
+}
+@include susy-breakpoint(678px) {
+  .contact-right {
+    @include last;
+  }
+}
+.contact-left {
+  padding-right: 20px;
+}
+.field-element {
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 2px;
+}
+input[type=submit] {
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid #000;
+  width: initial;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.first_name_group {
+  width: 48%;
+  margin-right: 4%;
+  float: left;
+}
+.last_name_group {
+  width: 48%;
+  margin-right: 0%;
+  float: left;
+}
+input:focus, textarea:focus {
+    background-color: #fafafa;
+}
+label {
+  margin-bottom: 5px;
+}
+
+/*********END FORMA***************/
 
 /* miscellaneous */
 
@@ -963,5 +1029,13 @@ body.contact {
 .clearfix {
   @include susy-clearfix;
 }
-
-
+.alert {
+  display: block;
+  @include container(1024px);
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #dff0d8;
+}
+.spacer {
+  margin-top: 100px;
+}

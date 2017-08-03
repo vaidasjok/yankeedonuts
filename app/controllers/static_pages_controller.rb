@@ -31,6 +31,8 @@ private
       "layout2"
     when "events"
       "layout_events"
+    when "contact"
+      "layout_contact"
     else
       "layout_all"
     end

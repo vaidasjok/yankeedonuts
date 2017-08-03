@@ -77,16 +77,17 @@ class PagesController < ApplicationController
 
 
   def send_mail
+    first_name = params[:first_name]
+    last_name = params[:last_name]
     email = params[:email]
-    phone = params[:phone]
     subject = params[:subject]
     message = params[:message]
 
-    if(email == '' || phone == '' || message == '')
-      redirect_to '/kontaktai', :flash => { :error => "Laukai \"El. pašto adresas\", \"Telefono numeris\" ir \"Žinutė\" negali būti tušti."}
+    if(last_name == '' || email == '' || first_name == '' || message == '')
+      redirect_to '/contact', :flash => { :error => "No field should be empty."}
     else
-      UserMailer.user_mail(email, phone, subject, message).deliver_now
-      redirect_to '/kontaktai', notice: "Jūsų žinutė sėkmingai išsiūsta."
+      UserMailer.user_mail(first_name, last_name, email, subject, message).deliver_now
+      redirect_to '/contact', notice: "Your message successfully sent. Thank you."
     end
   end
 

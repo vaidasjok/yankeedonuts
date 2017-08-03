@@ -6,9 +6,10 @@
   <body>
     <h1>Naujas laiškas iš 'plumbing.lt'</h1>
     <p>
-      Gauta iš <%= @email %>.<br>
-      Telefono numeris <%= @phone %>.<br>
-      Tekstas:<br>
+      From: <%= @first_name %> <%= @last_name %> <br>
+      Email: <%= @email %>.<br>
+      Subject <%= @subject %>.<br>
+      Message:<br>
       "<%= @message %>"
     </p>
   </body>

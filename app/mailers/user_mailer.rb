@@ -1,12 +1,13 @@
 class UserMailer < ApplicationMailer
-  default to: 'info@svetainiuekspertai.lt, vytautas@plumbing.lt', from: 'vytautas@plumbing.lt'
+  default to: 'info@svetainiuekspertai.lt', from: 'info@yankeedonuts.co.uk'
 
 
-  def user_mail(email, phone, subject, message)
+  def user_mail(first_name, last_name, email, subject, message)
+  	@first_name = first_name
+  	@last_name = last_name
     @email = email
-    @phone = phone
     @subject = subject
     @message = message
-    mail(from: 'vytautas@plumbing.lt', subject: subject)
+    mail(from: 'info@yankeedonuts.co.uk', subject: subject)
   end
 end

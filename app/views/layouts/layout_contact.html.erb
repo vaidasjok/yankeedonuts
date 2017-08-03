@@ -20,7 +20,7 @@
     <![endif]-->
   </head>
 
-  <body class="" >
+  <body class="all <%= yield(:body_class) %>" >
     <div id="wrap">
       
         <section id="header">
@@ -45,56 +45,8 @@
   
 
         </section>
-        <div id="slider-area">
-          <%= render 'shared/slide.html.erb' %>
-        </div>
 
-      <div id="top1">
-        <% flash.each do |message_type, message| %>
-            <div class="alert alert-<%= message_type %>"><%= message %></div>
-          <% end %>
-      </div><!-- #top1 -->
-      <div id="top2">
-        
-        <div class="ribbon first wide">
-          <div class="star star1"></div>
-          <div class="star star2"></div>
-          <div class="star star3"></div>
-          <div class="star star4"></div>
-          <div class="star star5"></div>
-          <div class="star star6"></div>
-          <div class="star star7"></div>
-          <div class="star star8"></div>
-          <div class="star star9"></div>
-          <div class="star star10"></div>
-          <div class="star star11"></div>
-        </div>
-    
-      </div>
-
-      <div id="donut-kinds" class="wide">
-        <div class="kind1">
-          <div class="flag1"></div>
-        </div>
-        <div class="kind2">
-          <div class="flag2"></div>
-        </div>
-        <div class="kind3">
-          <div class="flag3"></div>
-        </div>
-      </div>
-
-      <div id="events-banner" class="wide">
-        <h2>Events</h2>
-        <a href="/events" class="learn-more">Learn more</a>
-      </div>
-
-      <div id="delivery-banner" class="wide">
-        <h2>NOW DELIVERING<br>TO YOUR DOOR!</h2>
-        <a href="https://www.just-eat.ie/restaurants-yankeedonuts-rathmines/menu" class="order-online">Order Online</a>
-        <div id="deliveroo"></div>
-        <div id="just-eat"></div>
-      </div>
+      <div class="spacer"></div>
 
       <div class="stars-colored">
         <div class="star blue"></div>
@@ -108,25 +60,17 @@
         <div class="star blue"></div>
         <div class="star red last"></div>
       </div>
+      <div id="top1">
 
-      <div id="twitter" class="wide">
-        <a href="https://www.instagram.com/">
-          <div class="left">
-            <div class="content">
-              
-            </div>
-          </div>
-          <div class="middle">
-            <p class="invitation">FOLLOW US <br>ON INSTAGRAM</p>
-            <p class="twitter-address">@yankeedonuts</p>
-          </div>
-          <div class="right">
-            <div class="content">
-              
-            </div>
-          </div>
-        </a>
-      </div>
+        <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
+      </div><!-- #top1 -->
+
+
+      <section class="content">
+        <%= yield %>
+      </section>
 
       
 

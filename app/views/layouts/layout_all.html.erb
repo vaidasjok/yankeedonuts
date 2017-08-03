@@ -49,7 +49,9 @@
       <div id="top1">
         <div id="main-image">
         </div>
-
+        <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
       </div><!-- #top1 -->
 
 
