@@ -366,6 +366,7 @@ nav#menu {
   height: 122px;
   padding-top: 0px;
   background: transparent url("<%= asset_path 'header_bg.png' %>") repeat left top;
+
   .header-inner {
     @include container(1024px);
   }
@@ -936,6 +937,7 @@ body.all {
     text-transform: uppercase;
     margin-top: 27px;
   }
+
 }
 body.all.menu {
   #header {
@@ -1062,5 +1064,13 @@ label {
   margin-top: 100px;
   @include susy-breakpoint(0px 862px) {
     margin-top: 30px;
+  }
+}
+
+body.all.menu, body.all.contact, body.events {
+  #header {
+    @include susy-breakpoint(0px 420px) {
+      height: 116px;
+    }
   }
 }
