@@ -46,20 +46,8 @@
 
         </section>
 
-      <div id="top1">
-        <div id="main-image">
-        </div>
 
-        <% flash.each do |message_type, message| %>
-            <div class="alert alert-<%= message_type %>"><%= message %></div>
-          <% end %>
-        <h1>Events</h1>
-      </div><!-- #top1 -->
-
-
-      <div id="top2">
-    
-      </div>
+      <div class="spacer"></div>
 
       <div class="stars-colored">
         <div class="star blue"></div>
@@ -72,7 +60,21 @@
         <div class="star red"></div>
         <div class="star blue"></div>
         <div class="star red last"></div>
+      </div> 
+
+      <div id="top1">
+      
+        <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
+        <h1>Events</h1>
+      </div><!-- #top1 -->
+
+
+      <div id="top2">
+    
       </div>
+
       
     <div class="form-events">
       <div class="form-inner">
