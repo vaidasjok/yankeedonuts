@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:edit, :update, :destroy]
-  before_action :admin_user, except: [:show_pages, :send_mail]
+  before_action :admin_user, except: [:show_pages, :send_mail, :send_mail_event]
 
   # GET /pages
   # GET /pages.json
@@ -88,6 +88,22 @@ class PagesController < ApplicationController
     else
       UserMailer.user_mail(first_name, last_name, email, subject, message).deliver_now
       redirect_to '/contact', notice: "Your message successfully sent. Thank you."
+    end
+  end
+
+  def send_mail_event
+    name = params[:name]
+    phone = params[:phone]
+    email = params[:email]
+    date = params[:date]
+    time = params[:time]
+    comments = params[:comments]
+
+    if(name == '' || phone == '' || email == '' || date == '' || time == '' || comments == '')
+      redirect_to '/events', :flash => { :error => "No field should be empty."}
+    else
+      EventMailer.event_mail(name, phone, email, date, time, comments).deliver_now
+      redirect_to '/events', notice: "Your message successfully sent. Thank you."
     end
   end
 

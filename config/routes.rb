@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   post '/send-mail', to: 'pages#send_mail'
+   post '/send-mail-event', to: 'pages#send_mail_event'
   resources :users
 
 
