@@ -109,13 +109,14 @@ body {
 }
 #top2 {
   @include susy-breakpoint(670px ) {
-    @include container(1024px);
+    @include container(1750px);
   }
 }
 .ribbon.first.wide {
   position: relative;
   height: 34px;
   width: 100%;
+  @include container(1750px);
 
   margin-top: 13px;
   display: block;
@@ -220,7 +221,7 @@ footer h2, footer h3 {
   }
 }
 #slider-area {
-  @include container(1024px);
+  @include container(1750px);
   position: relative;
   &:after {
   content: '';
