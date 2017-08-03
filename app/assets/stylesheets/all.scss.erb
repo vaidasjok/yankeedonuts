@@ -367,6 +367,10 @@ nav#menu {
   padding-top: 0px;
   background: transparent url("<%= asset_path 'header_bg.png' %>") repeat left top;
 
+  @include susy-breakpoint(0px 420px) {
+    height: 116px;
+  }
+
   .header-inner {
     @include container(1024px);
   }
@@ -1068,9 +1072,5 @@ label {
 }
 
 
-#header {
-  @include susy-breakpoint(0px 420px) {
-    height: 116px;
-  }
-}
+
 
