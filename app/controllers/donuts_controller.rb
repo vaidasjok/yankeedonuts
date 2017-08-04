@@ -1,4 +1,5 @@
 class DonutsController < ApplicationController
+  before_action :admin_user
   before_action :set_donut, only: [:show, :edit, :update, :destroy]
   
   layout "layout2"
@@ -72,5 +73,26 @@ class DonutsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def donut_params
       params.require(:donut).permit(:title, :description, :photo, :number)
+    end
+
+
+        # Confirms a logged-in user.
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "Prašome prisijungti."
+        redirect_to login_url
+      end
+    end
+
+    # Confirms the correct user.
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless @user == current_user
+    end
+
+    # Confirms an admin user.
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
 end
