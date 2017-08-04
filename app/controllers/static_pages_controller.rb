@@ -18,6 +18,7 @@ layout :resolve_layout
   end
 
   def menu
+    @donuts = Donut.all
   end
 
 
@@ -34,7 +35,7 @@ private
     when "contact", "menu"
       "layout_contact"
     else
-      "layout_all"
+      "layout2"
     end
   end
 

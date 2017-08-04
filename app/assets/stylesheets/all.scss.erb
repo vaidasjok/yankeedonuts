@@ -1231,4 +1231,12 @@ p.more {
   font-size: 1.8em;
   margin-top: 4em;
 }
-
+.other #content {
+  @include container(1024px);
+  a:link, a:visited {
+    color: #000;
+  }
+  a:hover, a:active {
+    color: #fff;
+  }
+}

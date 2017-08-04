@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @donut.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @donut.description %>
+</p>
+
+<p>
+	<%= image_tag @donut.photo.url(:slide_gallery) %> <br>
+	Pavadinimas: <%= @donut.photo_file_name %>
+</p>
+<%= link_to 'Edit', edit_donut_path(@donut) %> |
+<%= link_to 'Back', donuts_path %>

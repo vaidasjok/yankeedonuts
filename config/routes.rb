@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :donuts
   resources :product_categories
   mount Ckeditor::Engine => '/ckeditor'
   resources :pages, param: :slug
