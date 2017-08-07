@@ -1,20 +1,14 @@
 <% provide(:title, @user.name) %>
-<% provide(:page_title, 'Svetainės administravimas' ) %>
+<% provide(:page_title, 'Administration panel' ) %>
 
 <div class="row">
   <aside class="col-md-4">
 
     <section class="pultas">
-      <p><a href="/pages">Puslapių valdymas</a><br>
-      <hr>
-      <a href="/product_categories">Katalogo kategorijų valdymas</a><br>
-      <a href="/products">Katalogo valdymas</a><br>
-      <hr>
-      <a href="/galleries">Galerijų valdymas</a><br>
-      <a href="/photos">Nuotraukų valdymas</a></p></p>
+      <p><a href="/donuts">Donuts's management</a><br>
       <br>
       <br>
-      <%= link_to 'Atsijungti', logout_path, method: "delete", class: 'valdymas-btn btn btn-danger', title: 'Išeiti iš sistemos' %>
+      <%= link_to 'Logout', logout_path, method: "delete", class: 'valdymas-btn btn btn-danger', title: 'Leave administration panel' %>
     </section>
   </aside>
 </div>

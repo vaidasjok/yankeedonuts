@@ -1215,8 +1215,20 @@ label {
         margin-bottom: 0.6em;
         margin-top: 0.6em;
         font-size: 1.2em;
+        @include susy-breakpoint(0px 593px) {
+          font-size: 0.9em;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          line-height: 0.8em;
+        }
         @include susy-breakpoint(0px 418px) {
           font-size: 0.8em;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          line-height: 0.8em;
+        }
+        @include susy-breakpoint(0px 390px) {
+          font-size: 0.7em;
           margin-top: 0.5em;
           margin-bottom: 0.5em;
           line-height: 0.8em;
