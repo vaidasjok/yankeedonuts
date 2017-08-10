@@ -1252,3 +1252,23 @@ p.more {
     color: #fff;
   }
 }
+
+a.more:link, a.order-onlinemore:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px 40px;
+    border: 5px solid #fff;
+    display: inline-block;
+    background-color: transparent;
+    @include susy-breakpoint(0px 888px) {
+
+    }
+
+}
+
+a.more:hover, a.more:active {
+  background-color: #cb0222;
+  color: #fff;
+}
