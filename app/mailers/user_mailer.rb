@@ -8,6 +8,6 @@ class UserMailer < ApplicationMailer
     @email = email
     @subject = subject
     @message = message
-    mail(from: 'info@yankeedonuts.co.uk', subject: subject)
+    mail(from: 'info@yankeedonuts.co.uk', subject: Contact)
   end
 end

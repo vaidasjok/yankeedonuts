@@ -1,5 +1,5 @@
 class EventMailer < ApplicationMailer
-	default to: 'info@svetainiuekspertai.lt, info@yankeedonuts.ie', from: 'info@yankeedonuts.co.uk'
+	default to: 'info@yankeedonuts.ie', from: 'info@yankeedonuts.co.uk'
 
 
 	def event_mail(name, phone, email, date, time, comments)
@@ -9,6 +9,6 @@ class EventMailer < ApplicationMailer
 		@date = date
 		@time = time
 		@comments = comments
-		mail(from: 'info@yankeedonuts.co.uk', subject: "Event")
+		mail(from: 'events@yankeedonuts.co.uk', subject: "Event")
 	end
 end
