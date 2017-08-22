@@ -1,5 +1,5 @@
 class EventMailer < ApplicationMailer
-	default to: 'info@yankeedonuts.ie', from: 'info@yankeedonuts.co.uk'
+	default to: 'events@yankeedonuts.ie', from: 'events@yankeedonuts.co.uk'
 
 
 	def event_mail(name, phone, email, date, time, comments)
